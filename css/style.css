@@ -123,7 +123,7 @@ header {
   display: none;
 }
 
-@media (max-width:500px) {}
+@media (max-width:500px) {
 
   .play-section {
     height: 18rem;
@@ -131,7 +131,7 @@ header {
     background-size: 13rem;
     background-position-y: 60px;
   }
-  
+
   .score-box p {
     margin: 5px 0 0 0;
   }
