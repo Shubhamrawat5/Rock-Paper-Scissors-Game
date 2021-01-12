@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <title>Rock, Paper, Scissors</title>
+
+</head>
+
+<body>
+  <header>
+    <img id="logo" src="images/logo.svg" alt="">
+    <div class="score-box">
+      <p>SCORE</p>
+      <div id="score">0</div>
+    </div>
+  </header>
+
+  <section id="home-section">
+    <div class="play-section">
+      <button class="game-button paper" type="button" name="button"><img src="images/icon-paper.svg" alt=""> </button>
+      <button class="game-button scissors" type="button" name="button"><img src="images/icon-scissors.svg" alt=""> </button>
+      <button class="game-button rock" type="button" name="button"><img src="images/icon-rock.svg" alt=""> </button>
+    </div>
+  </section>
+
+  <section id="in-game-section" class="">
+    <div class="in-game-btn-section">
+      <div class="you-picked-section">
+        <h1>YOU PICKED</h1>
+        <div id="you-picked-btn" class="">
+          <button class="game-button in-game" type="button" name="button"><img src="images/icon-paper.svg" alt=""> </button>
+        </div>
+      </div>
+
+      <div class="oppo-picked-section">
+        <h1>BOT PICKED</h1>
+        <div id="oppo-picked-btn" class="">
+          <button class="game-button in-game btn-space" type="button" name="button"><img src="" alt=""> </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="winner-announce">
+      <h1 id="show-winner"> WAIT.. </h1>
+    </div>
+  </section>
+
+  <div class="rules-box">
+    <div class="rules-header">
+      <h1>RULES</h1>
+      <button id="close-btn" type="button" name="button"><img src="images/icon-close.svg" alt="close"> </button>
+    </div>
+    <img id="rules-img" src="images/image-rules.svg" alt="rules">
+  </div>
+
+  <footer>
+    <div class="footer-area">
+      <button id="play-again" class="footer-btn" type="button" name="button">PLAY AGAIN</button>
+      <button id="rules" class="footer-btn" type="button" name="button">RULES</button>
+    </div>
+
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js">
+
+  </script>
+</body>
+
+</html>

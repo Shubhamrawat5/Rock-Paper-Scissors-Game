@@ -1,0 +1,258 @@
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background: linear-gradient(#1f3756, #141539);
+  color: white;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 2.2px;
+  height: 100vh;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header {
+  border: 2.5px solid hsl(217, 16%, 45%);
+  width: 50%;
+  min-width: 23rem;
+  padding: 18px;
+  display: inline-flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+#logo {
+  height: 85px;
+}
+
+.score-box {
+  background-color: white;
+  color: hsl(229, 25%, 31%);
+  width: 6rem;
+  border-radius: 10px;
+}
+
+.score-box p {
+  margin: 10px 0 0 0;
+}
+
+#score {
+  font-size: 40px;
+}
+
+.play-section {
+  background-image: url(../images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 75px;
+  height: 24.5rem;
+  width: 28rem;
+  margin: auto;
+}
+
+.game-button {
+  border-radius: 50%;
+  padding: 25px;
+  width: 9rem;
+  height: 9rem;
+  cursor: pointer;
+  margin: 20px 35px;
+  outline: none;
+}
+
+.game-button:hover {
+  transform: scale(1.01);
+}
+
+.paper {
+  border: 20px solid;
+  border-color: #4865f4;
+  box-shadow: inset 0 6px 2px 0 #babfd4, 0 6px 0 0 #0c2cca;
+  ;
+}
+
+.scissors {
+  border: 20px solid;
+  border-color: hsl(39, 89%, 49%);
+  box-shadow: inset 0 6px 2px 0 #babfd4, 0 6px 0 0 #8c5e08;
+}
+
+.rock {
+  border: 20px solid;
+  border-color: hsl(349, 71%, 52%);
+  box-shadow: inset 0 6px 2px 0 #babfd4, 0 6px 0 0 #8c182d;
+}
+
+.rules-box {
+  position: absolute;
+  height: 23rem;
+  width: 23rem;
+  border-radius: 10px;
+  left: 50%;
+  background: #f1f2f4;
+  color: hsl(229, 25%, 31%);
+  top: 50%;
+  transform: translate(-185px, -150px);
+  z-index: 1;
+  display: none;
+}
+
+.rules-header {
+  display: inline-flex;
+  width: 85%;
+  justify-content: space-between;
+}
+
+.rules-box img {
+  display: block;
+  margin: auto;
+}
+
+#close-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  display: none;
+}
+
+@media (max-width:500px) {
+  .play-section {
+    height: 18rem;
+    width: 18rem;
+    background-size: 13rem;
+    background-position-y: 60px;
+  }
+
+  .game-button {
+    width: 6.5rem;
+    height: 6.5rem;
+    margin: 20px 15px;
+    padding: 0px;
+  }
+
+  .game-button img {
+    width: 38px;
+  }
+
+  #logo {
+    height: 75px;
+  }
+
+  header {
+    min-width: 15rem;
+  }
+
+  .paper, .scissors, .rock {
+    border-width: 12px;
+  }
+
+  .rules-box {
+    height: 16rem;
+    width: 16rem;
+    transform: translate(-120px, -130px);
+  }
+
+  .rules-header h1 {
+    font-size: 20px;
+  }
+
+  #rules-img {
+    width: 200px;
+  }
+}
+
+footer {
+  width: 100%;
+}
+
+.footer-area {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.footer-btn {
+  background-color: #14163a;
+  color: white;
+  border: 2px solid hsl(217, 16%, 45%);
+  padding: 9px 25px;
+  border-radius: 10px;
+  outline: none;
+  font-family: inherit;
+  height: 40px;
+}
+
+.footer-btn:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+#in-game-section {
+  display: none;
+  width: 100%;
+}
+
+.in-game {
+  transform: scale(1.3);
+  cursor: default;
+  pointer-events: none;
+  margin: 0;
+}
+
+.in-game-btn-section {
+  display: inline-flex;
+  width: 90%;
+  height: 45vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.in-game-btn-section h1 {
+  font-weight: 100;
+  margin: 0 0 2.5rem 0;
+}
+
+.btn-space {
+  background-color: #192133;
+  border-width: 0;
+  pointer-events: none;
+  transform: scale(1.1);
+}
+
+.winner {
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  z-index: -1;
+  box-shadow: 0 0 0 3vw rgba(51, 67, 95, .25098), 0 0 0 6vw rgba(41, 58, 88, .25098), 0 0 0 9vw rgba(35, 54, 86, .25098);
+}
+
+#show-winner {
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+@media (max-width:500px) {
+  #show-winner {
+    font-size: 2.5rem;
+  }
+
+  .in-game-btn-section h1 {
+    font-size: 1.1rem;
+  }
+
+  .in-game {
+    transform: scale(1.1);
+  }
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
