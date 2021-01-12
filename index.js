@@ -66,7 +66,7 @@ function decideWinner(your, oppo) {
 let choices = ['rock', 'paper', 'scissors'];
 
 function opponent(yourChoiceBtnName) {
-  let n = Math.floor(Math.random() * 3);
+  let n = Date.now() % 3; //Date.now() to get better random number
   oppoChoiceBtnName = choices[n];
   console.log("OPPONENT CHOICE : " + oppoChoiceBtnName);
   setTimeout(function() {
