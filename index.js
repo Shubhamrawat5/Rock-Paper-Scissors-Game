@@ -75,7 +75,7 @@ function decideWinner(your, oppo) {
 let choices = ['rock', 'paper', 'scissors'];
 
 function opponent(yourChoiceBtnName) {
-  let n = Date.now() % 3; //Date.now() to get better random number
+  let n = (Math.floor(Math.random() * Date.now())) % 3; //Date.now() for number of seconds passed from 1970
   oppoChoiceBtnName = choices[n];
   console.log("OPPONENT CHOICE : " + oppoChoiceBtnName);
 
