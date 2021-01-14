@@ -1,5 +1,5 @@
 function activateLowerBtn() {
-  //activate rules button
+  //activate rule button
   $("#rules").click(function() {
     $(".rules-box").fadeIn("fast");
     $("#close-btn").click(function() {
@@ -9,11 +9,20 @@ function activateLowerBtn() {
 
   //activate play again button
   $("#play-again").click(function() {
+
+    //open home section
     $("#in-game-section").hide();
     $("#home-section").fadeIn("slow");
+
+    //remove winner effect
     $("#show-winner").text("WAIT..")
     $("#you-picked-btn").removeClass("winner");
     $("#oppo-picked-btn").removeClass("winner");
+
+    //clear your button
+    $("#you-picked-btn button").removeClass(yourChoiceBtnName);
+
+    //clear opponent button
     $("#oppo-picked-btn button").addClass("btn-space");
     $("#oppo-picked-btn button").removeClass(oppoChoiceBtnName);
     $("#oppo-picked-btn img").attr("src", ``);
@@ -21,8 +30,8 @@ function activateLowerBtn() {
 }
 
 function decideWinner(your, oppo) {
-  let winner; //1 for your and 0 for oppo win
-  if (your === oppo) {
+  let winner; //1 for you and 0 for oppo win
+  if (your === oppo) { //both choose same button
     setTimeout(function() {
       console.log("DRAW !");
       $("#show-winner").text("DRAW !")
@@ -69,6 +78,8 @@ function opponent(yourChoiceBtnName) {
   let n = Date.now() % 3; //Date.now() to get better random number
   oppoChoiceBtnName = choices[n];
   console.log("OPPONENT CHOICE : " + oppoChoiceBtnName);
+
+  //display opponent button
   setTimeout(function() {
     $("#oppo-picked-btn button").removeClass("btn-space");
     $("#oppo-picked-btn button").addClass(oppoChoiceBtnName);
@@ -80,14 +91,17 @@ function opponent(yourChoiceBtnName) {
 
 
 function start() {
+  //add click event listener to all 3 color buttons on home section
   $("#home-section button").click(function(event) {
     yourChoiceBtnName = event.currentTarget.classList[1];
     console.log("YOUR CHOICE : " + yourChoiceBtnName);
 
     // $("#home-section").addClass("show-hide-section");
     // $("#in-game-section").removeClass("show-hide-section");
-    $("#home-section").hide();
-    $("#in-game-section").fadeIn("slow");
+    $("#home-section").hide(); //hide
+    $("#in-game-section").fadeIn("slow"); //show
+
+    //show your selected button
     $("#you-picked-btn button").addClass(yourChoiceBtnName);
     $("#you-picked-btn img").attr("src", `images/icon-${yourChoiceBtnName}.svg`);
 
